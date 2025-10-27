@@ -10,7 +10,7 @@ nltk.download('stopwords')
 english_stop_words = set(stopwords.words('english'))
 
 
-pre_processed_df = pd.read_csv("reviews.csv") #Populate this function with
+pre_processed_df = pd.read_csv("reivews.csv") #Populate this function with
 #the actual csv file generated from the map scraping script
 pattern = r'[^a-zA-Z0-9\s]'
 pre_processed_df['0'] = pre_processed_df['0'].str.replace(pattern, '', regex=True)
@@ -25,3 +25,4 @@ plt.figure(figsize=(10, 5))
 plt.imshow(wordcloud, interpolation='bilinear')
 plt.axis('off')
 plt.show()
+
